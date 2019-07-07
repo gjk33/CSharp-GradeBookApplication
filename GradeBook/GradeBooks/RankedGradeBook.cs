@@ -27,7 +27,7 @@ namespace GradeBook.GradeBooks
                 var threshold = (int) Math.Ceiling(Students.Count * 0.2);
                 
                 //We then have a sorted list of average grades 
-                var grades = Students.OrderBy(e => e.AverageGrade).Select(e => e.AverageGrade).ToList();
+                var grades = Students.OrderByDescending(e => e.AverageGrade).Select(e => e.AverageGrade).ToList();
                 
                 
                 //We then check if the grade inputted is more than or equal to the grade that is occupying the 80% percentile point 
